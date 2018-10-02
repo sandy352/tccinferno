@@ -11,11 +11,9 @@ import diariomusical.models.Contato;
 public class ListarMusicas implements Comando {
 
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-		ContatoDAO dao = new ContatoDAO();
-		List<Contato> contatos = dao.getLista();
-		
-		
-		
+		String nomePLaylist = request.getParameter("Playlist");
+		PlaylistDAO DAO = new PlaylistDAO();
+		DAO.getPLaylist(nomePLaylist);
 		//request.setAttribute("contatos", contatos);
 		
 		return "lista.jsp";
