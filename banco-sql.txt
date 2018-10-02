@@ -1,0 +1,19 @@
+create database diariomusical;
+
+
+create table playlist(
+id int not null primary key auto_increment,
+nome varchar(200)
+);
+
+
+create table Musicas(
+id int not null primary key auto_increment,
+nome varchar(200),
+linkVideo varchar(200)
+);
+
+create table associador(
+idPlay int not null,
+idMusi int not null
+);
